@@ -1,0 +1,16 @@
+#hannuota
+def move(n, a, b, c):
+    if n == 1:
+        print(a, '-->', c)
+    else:
+        move(n-1, a, c, b)
+        move(1, a, b, c)
+        move(n-1, b, a, c)
+        
+#yanhuisanjiao
+def yang():
+    N  = [1]
+	  while True:
+		    yield N
+		    N.append(0)
+		    N = [N[i-1] + N[i] for i in range(len(N))]
